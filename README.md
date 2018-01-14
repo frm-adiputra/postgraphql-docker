@@ -33,3 +33,5 @@ docker run -p 5000:5000 \
   -e POSTGRES_DB=db \
   postgraphql postgraphql --schema myschema
 ```
+
+One option that cannot be changed is `--host`. It will be set to `0.0.0.0` in the image entrypoint.

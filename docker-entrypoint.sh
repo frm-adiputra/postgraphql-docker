@@ -56,7 +56,7 @@ if [ "$1" = 'postgraphql' ]; then
 
 	conn="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}"
 	args=("$@")
-	args+=("--connection" "$conn")
+	args+=("--connection" "$conn" "--host" "0.0.0.0")
   exec su-exec postgraphql "${args[@]}"
 fi
 
